@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/Samples/baidumapsdk/baidumapsdk.iml" filepath="$PROJECT_DIR$/Samples/baidumapsdk/baidumapsdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/Samples/crosswalk/crosswalk.iml" filepath="$PROJECT_DIR$/Samples/crosswalk/crosswalk.iml" />
       <module fileurl="file://$PROJECT_DIR$/Samples/plugintest3/plugintest3.iml" filepath="$PROJECT_DIR$/Samples/plugintest3/plugintest3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Samples/unaloneplugin/unaloneplugin.iml" filepath="$PROJECT_DIR$/Samples/unaloneplugin/unaloneplugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/Samples/wxsdklibrary/wxsdklibrary.iml" filepath="$PROJECT_DIR$/Samples/wxsdklibrary/wxsdklibrary.iml" />
     </modules>
   </component>

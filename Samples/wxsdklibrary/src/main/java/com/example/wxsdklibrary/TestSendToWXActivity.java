@@ -1,9 +1,9 @@
 package com.example.wxsdklibrary;
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
@@ -19,7 +19,7 @@ import com.tencent.mm.sdk.openapi.WXMediaMessage;
 import com.tencent.mm.sdk.openapi.WXTextObject;
 
 @PluginContainer
-public class TestSendToWXActivity extends Activity {
+public class TestSendToWXActivity extends AppCompatActivity {
 
 	private IWXAPI api;
 

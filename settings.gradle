@@ -1,4 +1,5 @@
 include ':FairyPlugin'
+include ':Samples:unaloneplugin'
 include ':Samples:PluginBase'
 include ':Samples:PluginHelloWorld'
 include ':Samples:PluginMain'

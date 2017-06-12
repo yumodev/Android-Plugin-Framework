@@ -1,8 +1,8 @@
 package com.example.pluginmain.wxapi;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.tencent.mm.sdk.openapi.BaseReq;
@@ -11,7 +11,7 @@ import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
 
-public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
+public class WXEntryActivity extends AppCompatActivity implements IWXAPIEventHandler{
 
 	public static final String APP_ID = "wx8ce466b2fc952d31";
 

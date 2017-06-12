@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "com.plugin.unalone"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+   // compile 'com.android.support:appcompat-v7:25.2.0'
+    //compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    provided files(project(':Samples:PluginMain').getBuildDir().absolutePath + '/outputs/PluginMain-debug.jar')
+    testCompile 'junit:junit:4.12'
+}
+
+afterEvaluate {
+    tasks.getByName("assembleDebug").doLast {
+        println '复制插件 debug apk 到 PluginMain/src/main/assets/目录下, 便于测试'
+        copy {
+            from(buildDir.absolutePath + '/outputs/apk/') {
+                include project.name + '-' + 'debug' + '.apk'
+            }
+            into(project(':Samples:PluginMain').getProjectDir().absolutePath + '/src/main/assets/')
+        }
+    }
+}
+
+ext {
+    //这2个常量在下面的apply的脚本中要用到
+    //一个是指定宿主编译出来的output目录，一个是指定宿主编译出来的ap_文件
+    host_output_dir = project(':Samples:PluginMain').getBuildDir().absolutePath + "/outputs"
+
+    //注意这里写的是debug的ap_文件，使用不同的buildType应换成不同的文件名
+    host_ap_path = host_output_dir + '/PluginMain-resources-universal-debug.ap_'
+
+    //用于混淆配置
+    //host_obfuscated_jar = host_output_dir + '/host_debug_obfuscated.jar'
+}
+
+//apply from: '/Users/cailiming/develop/Android-Plugin-Framework/FairyPlugin/plugin.gradle'
+apply from: "https://raw.githubusercontent.com/limpoxe/Android-Plugin-Framework/master/FairyPlugin/plugin.gradle"
+
