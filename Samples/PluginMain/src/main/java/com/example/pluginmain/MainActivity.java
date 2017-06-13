@@ -39,6 +39,8 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import com.yumo.demo.view.YmTestActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private BaseAdapter listAdapter;
@@ -194,6 +196,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, TestCaseListActivity.class));
+            }
+        });
+
+        ((Button) findViewById(R.id.ymtest)).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+               startActivity(new Intent(MainActivity.this, YmTestActivity.class));
             }
         });
 	}

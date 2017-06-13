@@ -157,7 +157,7 @@ public class TestCaseListActivity extends AppCompatActivity implements View.OnCl
             unbindService(scn);
             scn = null;
         }
-    };
+    }
 
     @Override
     public void onBackPressed() {

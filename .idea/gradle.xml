@@ -21,6 +21,8 @@
             <option value="$PROJECT_DIR$/Samples/baidumapsdk" />
             <option value="$PROJECT_DIR$/Samples/crosswalk" />
             <option value="$PROJECT_DIR$/Samples/plugintest3" />
+            <option value="$PROJECT_DIR$/Samples/richeditor" />
+            <option value="$PROJECT_DIR$/Samples/sample" />
             <option value="$PROJECT_DIR$/Samples/unaloneplugin" />
             <option value="$PROJECT_DIR$/Samples/wxsdklibrary" />
           </set>

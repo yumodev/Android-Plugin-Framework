@@ -95,6 +95,10 @@
         <activity android:name=".TestViewActivity"
             android:process=":plugin"/>
 
+        <!-- 要展示插件中的View，所以配成插件进程 -->
+        <activity android:name=".mytest.MyTestActivity"
+            android:process=":plugin"/>
+
         <!-- 要展示插件中的Activity，所以配成插件进程 -->
         <activity android:name=".TestTabActivity"
             android:process=":plugin"/>
