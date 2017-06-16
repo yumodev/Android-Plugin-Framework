@@ -41,6 +41,17 @@
         tools:text="非独立插件"/>
 
     <TextView
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/is_standard"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="2dp"
+        android:textSize="12sp"
+        android:text="控件详情"/>
+
+    <TextView
         android:id="@+id/plugin_version"
         android:layout_width="match_parent"
         android:layout_height="24dp"

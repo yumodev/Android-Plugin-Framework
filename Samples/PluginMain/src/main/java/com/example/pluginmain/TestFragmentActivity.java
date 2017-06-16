@@ -19,7 +19,7 @@ import com.limpoxe.fairy.core.annotation.PluginContainer;
  * @author cailiming
  * 
  */
-@PluginContainer(pluginId = "com.example.plugintest")
+//@PluginContainer(pluginId = "com.example.plugintest")
 public class TestFragmentActivity extends AppCompatActivity {
 
 	public static final String FRAGMENT_ID_IN_PLUGIN = "PluginDispatcher.fragmentId";

@@ -125,7 +125,6 @@
             <intent-filter>
                 <action
                     android:name="test.webXX" />
-
                 <category
                     android:name="android.intent.category.DEFAULT" />
             </intent-filter>

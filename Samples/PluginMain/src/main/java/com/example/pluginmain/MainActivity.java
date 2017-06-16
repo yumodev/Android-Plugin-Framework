@@ -164,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
                 TextView isStandard = (TextView) view.findViewById(R.id.is_standard);
                 TextView pluginVersion = (TextView) view.findViewById(R.id.plugin_version);
                 TextView uninstall = (TextView) view.findViewById(R.id.uninstall);
+                TextView detailPlugin = (TextView) view.findViewById(R.id.detail);
 
                 final PluginDescriptor pluginDescriptor = plugins.get(position);
                 appName.setText(ResourceUtil.getLabel(pluginDescriptor));
@@ -184,6 +185,13 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         PluginManagerHelper.remove(pluginDescriptor.getPackageName());
                         refreshListView();
+                    }
+                });
+
+                detailPlugin.setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View view) {
+                        testOpenPluginDetail(pluginDescriptor);
                     }
                 });
 
@@ -224,6 +232,16 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("plugin_id", pluginDescriptor.getPackageName());
             startActivity(intent);
         }
+    }
+
+    private void testOpenPluginDetail(PluginDescriptor pluginDescriptor) {
+
+        Toast.makeText(MainActivity.this, "插件"  + pluginDescriptor.getPackageName() + "没有配置Launcher", Toast.LENGTH_SHORT).show();
+        //没有找到Launcher，打开插件详情
+        Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+        intent.putExtra("plugin_id", pluginDescriptor.getPackageName());
+        startActivity(intent);
+
     }
 
 	private void copyAndInstall(String name) {

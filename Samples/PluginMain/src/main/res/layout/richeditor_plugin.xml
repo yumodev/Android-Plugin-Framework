@@ -5,6 +5,12 @@
     android:background="#FF00CC00"
     android:orientation="vertical">
 
+    <Button
+        android:id="@+id/test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="test"/>
     <!-- 测试控件级插件-->
     <pluginView
         class="jp.wasabeef.sample.YmRichEditor"
