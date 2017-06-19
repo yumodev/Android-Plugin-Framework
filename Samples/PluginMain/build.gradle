@@ -94,8 +94,8 @@ android {
 }
 
 dependencies {
-    compile('com.limpoxe.fairy:FairyPlugin:0.0.54-snapshot@aar')//通过后缀@aar来中断依赖传递
-    //compile project(':FairyPlugin')
+    //compile('com.limpoxe.fairy:FairyPlugin:0.0.54-snapshot@aar')//通过后缀@aar来中断依赖传递
+    compile project(':FairyPlugin')
     //optional
     //compile('com.limpoxe.support:android-servicemanager:1.0.5@aar')
 
@@ -120,5 +120,5 @@ ext {
     //pluginProcess = ":plugin"
 }
 
-//apply from: '/Users/cailiming/develop/Android-Plugin-Framework/FairyPlugin/host.gradle'
-apply from: "https://raw.githubusercontent.com/limpoxe/Android-Plugin-Framework/master/FairyPlugin/host.gradle"
+apply from: '/Users/trunx/git/apf/FairyPlugin/host.gradle'
+//apply from: "https://raw.githubusercontent.com/limpoxe/Android-Plugin-Framework/master/FairyPlugin/host.gradle"

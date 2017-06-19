@@ -20,6 +20,7 @@ import com.limpoxe.fairy.core.annotation.PluginContainer;
  * 
  */
 //@PluginContainer(pluginId = "com.example.plugintest")
+@PluginContainer(pluginId = "jp.wasabeef.sample")
 public class TestFragmentActivity extends AppCompatActivity {
 
 	public static final String FRAGMENT_ID_IN_PLUGIN = "PluginDispatcher.fragmentId";
@@ -29,7 +30,7 @@ public class TestFragmentActivity extends AppCompatActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.fragment_activity);
+		//setContentView(R.layout.fragment_activity_richeditor);
 
 		loadPluginFragment();
 	}
@@ -47,7 +48,7 @@ public class TestFragmentActivity extends AppCompatActivity {
 			if (clazz != null) {
 				Fragment fragment = (Fragment) clazz.newInstance();
 				FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-				ft.replace(R.id.fragment_container, fragment).commit();
+				ft.replace(android.R.id.content, fragment).commit();
 			} else {
 				Log.e(LOG_TAG, "class not found, classId is " + classId);
 			}
